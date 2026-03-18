@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import './App.css';
 
 // --- CONFIGURACIÓN ---
 const GOOGLE_FORM_URL = "https://forms.gle/wqYTp9rsayfqM3tx9";
