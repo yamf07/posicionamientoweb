@@ -375,7 +375,7 @@ export default function App() {
             <div className="seo-testimonial glass">
               <div className="seo-testimonial__quote-icon">"</div>
               <p className="seo-testimonial__text">
-                Desde que aplicamos la estrategia SEO, las llamadas no han parado. No solo estamos en Google, estamos captando clientes que antes ni sabían que existíamos. El diagnóstico gratuito fue el primer paso que cambió todo.
+                Tener el negocio en el mapa no servía de nada si nadie nos encontraba al buscar 'cerca de mí'. Entendimos que estar en Google es una cosa, pero posicionarse para ganar es otra muy distinta. Gracias al plan estratégico, pasamos de ser una opción más a ser la primera llamada que hacen nuestros clientes locales.
               </p>
               <div className="seo-testimonial__author">
                 <div className="seo-testimonial__avatar">
@@ -418,9 +418,7 @@ export default function App() {
             rel="noopener noreferrer"
           >
             <span className="whatsapp-float__icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.025 3.204l-.545 2.037 2.094-.548c.867.469 1.846.72 2.87.721h.001c3.182 0 5.768-2.586 5.769-5.767 0-3.181-2.587-5.766-5.769-5.766zM15.545 14.8c-.148.413-.733.753-1.018.808-.285.055-.548.061-.839-.033-.29-.093-1.077-.394-2.022-1.238-.735-.655-1.231-1.465-1.375-1.712-.144-.247-.015-.381.109-.504.111-.11.247-.29.37-.435.124-.145.165-.247.247-.412.082-.165.041-.31-.02-.435-.062-.125-.548-1.321-.751-1.81-.198-.475-.397-.411-.548-.419-.142-.007-.305-.009-.468-.009-.164 0-.43.062-.655.31-.226.247-.862.844-.862 2.057s.883 2.382 1.006 2.547c.124.165 1.737 2.654 4.207 3.717.587.253 1.045.405 1.403.519.59.187 1.127.161 1.551.097.472-.071 1.45-.593 1.655-1.166.205-.572.205-1.064.144-1.166-.061-.101-.226-.164-.473-.289z" />
-              </svg>
+              <img width="32" height="32" src="https://img.icons8.com/badges/48/whatsapp.png" alt="whatsapp" />
             </span>
             <span class="whatsapp-float__text">¿Hablamos?</span>
           </a>

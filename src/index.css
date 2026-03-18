@@ -731,8 +731,8 @@ body {
   letter-spacing: -0.02em;
   margin: 0.875rem 0;
   overflow-wrap: break-word;
-  word-break: break-word;
-  hyphens: auto;
+  word-break: keep-all;
+  hyphens: none;
   max-width: 100%;
 }
 
