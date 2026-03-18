@@ -53,6 +53,75 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* ======================== WHATSAPP FLOAT ======================== */
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #22c55e;
+  /* Color oficial WhatsApp */
+  color: white;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 0.95rem;
+  box-shadow: 0 10px 25px rgba(34, 197, 94, 0.4);
+  transition: var(--transition);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  /* Reutilizamos tu animación de float */
+  animation: float 4s ease-in-out infinite;
+
+  /* Estado inicial: Oculto */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  /* Pequeño efecto de entrada desde abajo */
+  pointer-events: none;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Estado activo: Visible */
+.whatsapp-float--visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.05) translateY(-5px);
+  background: #1eb354;
+  box-shadow: 0 15px 35px rgba(34, 197, 94, 0.6);
+}
+
+.whatsapp-float__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 0.4rem;
+  border-radius: 50%;
+}
+
+/* Ocultar texto en móviles muy pequeños para no estorbar */
+@media (max-width: 480px) {
+  .whatsapp-float {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    padding: 0.8rem;
+  }
+
+  .whatsapp-float__text {
+    display: none;
+  }
+}
+
 /* ======================== ANIMATIONS ======================== */
 
 @keyframes float {
@@ -294,13 +363,17 @@ body {
   gap: 0.5rem;
   background: rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(8px);
-  padding: 0.5rem 1.25rem;
+  padding: 0.5rem 1rem;
   border-radius: var(--radius-full);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   font-weight: 700;
   color: white;
   letter-spacing: 0.02em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 
 .badge-dot {
@@ -363,12 +436,20 @@ body {
   backdrop-filter: blur(8px);
   color: white;
   font-weight: 700;
-  padding: 1rem 2.5rem;
+  padding: 1rem 2rem;
   border-radius: var(--radius-full);
   border: 1px solid rgba(255, 255, 255, 0.25);
   cursor: pointer;
   font-size: 1rem;
   transition: var(--transition);
+  width: 100%;
+}
+
+@media (min-width: 480px) {
+  .btn-secondary {
+    width: auto;
+    padding: 1rem 2.5rem;
+  }
 }
 
 .btn-secondary:hover {
@@ -384,14 +465,23 @@ body {
   background: white;
   color: var(--color-slate-900);
   font-weight: 900;
-  padding: 1.1rem 2.5rem;
+  padding: 1rem 2rem;
   border-radius: var(--radius-xl);
   border: none;
   cursor: pointer;
-  font-size: 1.1rem;
+  font-size: 1rem;
   transition: var(--transition);
   box-shadow: var(--shadow-2xl);
   text-decoration: none;
+  width: 100%;
+}
+
+@media (min-width: 480px) {
+  .btn-cta {
+    width: auto;
+    padding: 1.1rem 2.5rem;
+    font-size: 1.1rem;
+  }
 }
 
 .btn-cta:hover {
@@ -555,6 +645,16 @@ body {
 
 .seo-hero-section {
   padding-top: 6rem;
+  overflow-x: hidden;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .seo-hero-section {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -565,21 +665,30 @@ body {
 
 .seo-hero-card {
   background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #1e1b4b 100%);
-  border-radius: var(--radius-3xl);
-  padding: 5rem 3rem;
+  border-radius: var(--radius-2xl);
+  padding: 2.5rem 1.25rem;
   position: relative;
   overflow: hidden;
   box-shadow: 0 40px 80px rgba(15, 23, 42, 0.5);
   display: grid;
   grid-template-columns: 1fr;
-  gap: 3rem;
+  gap: 2rem;
   align-items: center;
+}
+
+@media (min-width: 640px) {
+  .seo-hero-card {
+    border-radius: var(--radius-3xl);
+    padding: 3.5rem 2.5rem;
+    gap: 2.5rem;
+  }
 }
 
 @media (min-width: 1024px) {
   .seo-hero-card {
     grid-template-columns: 1fr auto;
     padding: 5rem 4rem;
+    gap: 3rem;
   }
 }
 
@@ -609,47 +718,84 @@ body {
 .seo-hero__content {
   position: relative;
   z-index: 2;
+  min-width: 0;
+  overflow: hidden;
+  width: 100%;
 }
 
 .seo-hero__title {
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-size: clamp(1.6rem, 6.5vw, 4.5rem);
   font-weight: 900;
   color: white;
-  line-height: 1.08;
-  letter-spacing: -0.03em;
-  margin: 1.5rem 0;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0.875rem 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+  max-width: 100%;
+}
+
+@media (min-width: 640px) {
+  .seo-hero__title {
+    font-size: clamp(2.2rem, 5vw, 4.5rem);
+    letter-spacing: -0.03em;
+    margin: 1.5rem 0;
+  }
 }
 
 .seo-hero__subtitle {
-  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-size: clamp(0.9rem, 3.5vw, 1.2rem);
   color: #cbd5e1;
   font-weight: 500;
   line-height: 1.7;
-  max-width: 560px;
-  margin-bottom: 2.5rem;
+  max-width: 100%;
+  margin-bottom: 1.5rem;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+@media (min-width: 640px) {
+  .seo-hero__subtitle {
+    max-width: 560px;
+    margin-bottom: 2rem;
+  }
 }
 
 .seo-hero__actions {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+@media (min-width: 480px) {
+  .seo-hero__actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
 }
 
 /* Stats floating cards */
 .seo-hero__stats {
   display: flex;
   flex-direction: row;
-  gap: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
   position: relative;
   z-index: 2;
   justify-content: center;
+  width: 100%;
+  min-width: 0;
 }
 
 @media (min-width: 1024px) {
   .seo-hero__stats {
     flex-direction: column;
+    flex-wrap: nowrap;
     gap: 1.25rem;
     min-width: 180px;
+    width: auto;
   }
 }
 
@@ -658,9 +804,20 @@ body {
   backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: var(--radius-2xl);
-  padding: 1.25rem 1.75rem;
+  padding: 1rem 0.75rem;
   text-align: center;
+  flex: 1 1 110px;
   min-width: 110px;
+  max-width: 160px;
+}
+
+@media (min-width: 1024px) {
+  .seo-stat-card {
+    flex: none;
+    max-width: none;
+    min-width: 110px;
+    padding: 1.25rem 1.75rem;
+  }
 }
 
 .seo-stat-card__value {
@@ -828,8 +985,6 @@ body {
   height: 2px;
   background: repeating-linear-gradient(90deg, #cbd5e1 0px, #cbd5e1 6px, transparent 6px, transparent 12px);
 }
-
-.seo-process-step__body {}
 
 .seo-process-step__title {
   font-size: 1.1rem;

@@ -117,11 +117,23 @@ export default function App() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('inicio');
+  const [showWA, setShowWA] = useState(false);
 
   useEffect(() => {
     const onScroll = () => {
       setScrolled(window.scrollY > 20);
     };
+    const handleScroll = () => {
+      // Detectamos si el scroll ha pasado los 400px (aprox el final del hero)
+      if (window.scrollY > 400) {
+        setShowWA(true);
+      } else {
+        setShowWA(false);
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
@@ -400,6 +412,19 @@ export default function App() {
             </p>
           </div>
         </section>
+        <div>
+          <a href={WHATSAPP_URL} className={`whatsapp-float ${showWA ? 'whatsapp-float--visible' : ''}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="whatsapp-float__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.025 3.204l-.545 2.037 2.094-.548c.867.469 1.846.72 2.87.721h.001c3.182 0 5.768-2.586 5.769-5.767 0-3.181-2.587-5.766-5.769-5.766zM15.545 14.8c-.148.413-.733.753-1.018.808-.285.055-.548.061-.839-.033-.29-.093-1.077-.394-2.022-1.238-.735-.655-1.231-1.465-1.375-1.712-.144-.247-.015-.381.109-.504.111-.11.247-.29.37-.435.124-.145.165-.247.247-.412.082-.165.041-.31-.02-.435-.062-.125-.548-1.321-.751-1.81-.198-.475-.397-.411-.548-.419-.142-.007-.305-.009-.468-.009-.164 0-.43.062-.655.31-.226.247-.862.844-.862 2.057s.883 2.382 1.006 2.547c.124.165 1.737 2.654 4.207 3.717.587.253 1.045.405 1.403.519.59.187 1.127.161 1.551.097.472-.071 1.45-.593 1.655-1.166.205-.572.205-1.064.144-1.166-.061-.101-.226-.164-.473-.289z" />
+              </svg>
+            </span>
+            <span class="whatsapp-float__text">¿Hablamos?</span>
+          </a>
+        </div>
       </main>
 
       {/* ======================== FOOTER ======================== */}
