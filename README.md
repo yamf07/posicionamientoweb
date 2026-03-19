@@ -40,22 +40,22 @@ Bash
 # 🚀 Instalación y Desarrollo Local
 Si deseas replicar este proyecto localmente, sigue estos pasos:
 
-1. Clonar el repositorio:
+Clonar el repositorio:
 
 Bash
 git clone https://github.com/yamf07/posicionamientoweb.git
 
-2. Instalar dependencias:
+Instalar dependencias:
 
 Bash
 npm install
 
-3. Ejecutar en modo desarrollo:
+Ejecutar en modo desarrollo:
 
 Bash
 npm run dev
 
-4. Construir para producción:
+4Construir para producción:
 
 Bash
 npm run build
