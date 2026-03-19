@@ -1306,6 +1306,128 @@ body {
   color: var(--color-slate-600);
 }
 
+/* ======================== SOCIAL LINKS ======================== */
+
+.seo-footer__social {
+  margin-top: 1.5rem;
+}
+
+.seo-social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-lg);
+  transition: var(--transition);
+}
+
+.seo-social-link:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: #a78bfa;
+  /* Color lila del gradiente */
+  transform: translateY(-2px);
+}
+
+.seo-social-link__icon {
+  color: #60a5fa;
+  /* Azul brillante */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.seo-social-link__text {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-slate-300);
+  letter-spacing: 0.02em;
+}
+
+.seo-social-link:hover .seo-social-link__text {
+  color: white;
+}
+
+/* Contenedor para alinear ambas redes sociales */
+.seo-footer__social-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+/* Ajuste al enlace social para que sea más compacto en grupo */
+.seo-social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-lg);
+  transition: var(--transition);
+  flex: 1 1 auto;
+  /* Permite que crezcan un poco en móviles */
+  justify-content: center;
+  max-width: 160px;
+}
+
+/* Efecto específico para Behance (opcional: puedes usar el azul de tu marca o el lila) */
+.seo-social-link:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--color-primary-light);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.seo-social-link__icon {
+  color: #60a5fa;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.seo-social-link__text {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--color-slate-400);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.seo-social-link:hover .seo-social-link__text {
+  color: white;
+}
+
+/* Control del icono externo de Icons8 */
+.seo-social-img {
+  width: 20px;
+  /* Tamaño controlado para que no se desfase */
+  height: 20px;
+  object-fit: contain;
+  /* El icono original es negro, lo pasamos a un tono azulado/blanco 
+     para que combine con tu diseño High-End */
+  filter: invert(70%) sepia(80%) saturate(500%) hue-rotate(190deg) brightness(100%);
+  transition: var(--transition);
+}
+
+.seo-social-link:hover .seo-social-img {
+  /* Al hacer hover, lo ponemos totalmente blanco brillante */
+  filter: invert(100%) brightness(200%);
+  transform: scale(1.1);
+}
+
+/* Reajustamos el contenedor del icono para que no haya padding extra */
+.seo-social-link__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+}
+
 /* ======================== RESPONSIVE ======================== */
 
 @media (max-width: 768px) {

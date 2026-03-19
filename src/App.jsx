@@ -121,20 +121,10 @@ export default function App() {
   useEffect(() => {
     const onScroll = () => {
       setScrolled(window.scrollY > 20);
-    };
-    const handleScroll = () => {
-      // Detectamos si el scroll ha pasado los 400px (aprox el final del hero)
-      if (window.scrollY > 400) {
-        setShowWA(true);
-      } else {
-        setShowWA(false);
-      }
+      setShowWA(window.scrollY > 400);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-
-    window.addEventListener('scroll', onScroll);
-    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
   const handleCta = () => window.open(GOOGLE_FORM_URL, '_blank');
@@ -444,6 +434,41 @@ export default function App() {
                 Servicios de desarrollo web e identidad visual. Transformo negocios a través de diseño moderno,
                 optimización SEO y estrategias de conversión en Google Maps.
               </p>
+              <div className="seo-footer__social-grid">
+                {/* Instagram */}
+                <a
+                  href="https://instagram.com/ymdesign07"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="seo-social-link"
+                >
+                  <div className="seo-social-link__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="18" height="18">
+                      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                  </div>
+                  <span className="seo-social-link__text">Instagram</span>
+                </a>
+
+                {/* Behance */}
+                <a
+                  href="https://behance.net/yeirinsonmejias"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="seo-social-link"
+                >
+                  <div className="seo-social-link__icon">
+                    <img
+                      src="https://img.icons8.com/ios-filled/50/behance.png"
+                      alt="behance"
+                      className="seo-social-img"
+                    />
+                  </div>
+                  <span className="seo-social-link__text">Portafolio</span>
+                </a>
+              </div>
               <div style={{ display: 'flex', gap: '1rem', marginTop: '1.5rem' }}>
                 <a href="#servicios" className="nav-link" style={{ color: '#94a3b8' }}>Servicios</a>
                 <a href="#proceso" className="nav-link" style={{ color: '#94a3b8' }}>Proceso</a>
