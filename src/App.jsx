@@ -501,7 +501,7 @@ export default function App() {
           </div>
 
           <div className="seo-footer__bottom">
-            <span>SEO Estratégico en Venezuela &copy; 2026</span>
+            <span>SEO Estratégico &copy; 2026</span>
             <span style={{ color: '#334155', fontSize: '0.8rem' }}>Diseño web · SEO Local · Google Maps</span>
           </div>
         </div>
