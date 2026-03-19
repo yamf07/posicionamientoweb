@@ -53,7 +53,7 @@ Ejecutar en modo desarrollo:
 Bash
 npm run dev
 
-4Construir para producción:
+Construir para producción:
 
 Bash
 npm run build
