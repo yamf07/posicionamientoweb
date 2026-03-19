@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="/public/assets/preview.png" alt="Posicionamiento Web Banner" width="100%">
-</p>
+![Banner Posicionamiento Web](/public/assets/preview.png)
 
 # 🚀 Landing Page: Posicionamiento Web & SEO
 Esta es la documentación del repositorio oficial para la Landing Page de servicios de Posicionamiento Web y Auditoría SEO. El proyecto está diseñado con un enfoque de alto rendimiento, optimización de conversión (CRO) y una estética profesional minimalista.
