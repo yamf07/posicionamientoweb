@@ -63,8 +63,12 @@ npm run build
 # ✉️ Contacto
 Proyecto desarrollado por Yeirinson Mejias.
 
-- Web: posicionamientoweb.netlify.app
+## ✉️ Contacto
 
-- LinkedIn: [@yeirinson07]- 
+Proyecto desarrollado por **Yeirinson Mejias**.
 
-- Instagram: [@ymdesign07]
+- [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/ymdesign07)
+
+- [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/yeirinson07)
+
+- [![Website](https://img.shields.io/badge/Website-000000?style=for-the-badge&logo=netlify&logoColor=white)](https://posicionamientoweb.netlify.app)
