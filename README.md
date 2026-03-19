@@ -61,9 +61,6 @@ npm run build
 - [ ] Soporte multi-idioma (i18n).
 
 # ✉️ Contacto
-Proyecto desarrollado por Yeirinson Mejias.
-
-## ✉️ Contacto
 
 Proyecto desarrollado por **Yeirinson Mejias**.
 
