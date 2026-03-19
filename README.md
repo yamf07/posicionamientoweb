@@ -1,4 +1,4 @@
-![Banner Posicionamiento Web](/public/assets/preview.png)
+![Banner Posicionamiento Web](/src/assets/preview.png)
 
 # 🚀 Landing Page: Posicionamiento Web & SEO
 Esta es la documentación del repositorio oficial para la Landing Page de servicios de Posicionamiento Web y Auditoría SEO. El proyecto está diseñado con un enfoque de alto rendimiento, optimización de conversión (CRO) y una estética profesional minimalista.
@@ -26,7 +26,6 @@ El proyecto fue construido utilizando herramientas de última generación para g
 - Alta Velocidad: Puntuación optimizada en Google PageSpeed Insights.
 
 # 📂 Estructura del Proyecto
-    Bash
     ├── src/
     │   ├── components/       # Componentes reutilizables (Navbar, Footer, Hero)
     │   ├── layouts/          # Plantillas base de la página
@@ -40,23 +39,25 @@ Si deseas replicar este proyecto localmente, sigue estos pasos:
 
 Clonar el repositorio:
 
-Bash
+```bash
 git clone https://github.com/yamf07/posicionamientoweb.git
-
+```
 Instalar dependencias:
 
-Bash
+```bash
 npm install
-
+```
 Ejecutar en modo desarrollo:
 
-Bash
+```bash
 npm run dev
+```
 
 Construir para producción:
 
-Bash
+```bash
 npm run build
+```
 
 # 📈 Roadmap / Próximas Actualizaciones
 - [ ] Integración de Blog con Markdown para marketing de contenidos.
