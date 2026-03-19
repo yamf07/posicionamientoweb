@@ -8,7 +8,7 @@ Esta es la documentación del repositorio oficial para la Landing Page de servic
 # 🛠️ Tecnologías Utilizadas
 El proyecto fue construido utilizando herramientas de última generación para garantizar velocidad de carga y escalabilidad:
 
-- Frontend: Astro / React (Selecciona el que estés usando).
+- Frontend: React.
 
 - Estilos: Tailwind CSS para un diseño responsivo y moderno.
 
