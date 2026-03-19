@@ -26,37 +26,36 @@ El proyecto fue construido utilizando herramientas de última generación para g
 - Alta Velocidad: Puntuación optimizada en Google PageSpeed Insights.
 
 # 📂 Estructura del Proyecto
-
-```bash
-├── src/
-│   ├── components/       # Componentes reutilizables (Navbar, Footer, Hero)
-│   ├── layouts/          # Plantillas base de la página
-│   ├── pages/            # Rutas del sitio (index.astro / index.js)
-│   └── assets/           # Imágenes, vectores y estilos globales
-├── public/               # Archivos estáticos
-└── tailwind.config.mjs   # Configuración de diseño y colores
+    Bash
+    ├── src/
+    │   ├── components/       # Componentes reutilizables (Navbar, Footer, Hero)
+    │   ├── layouts/          # Plantillas base de la página
+    │   ├── pages/            # Rutas del sitio (index.astro / index.js)
+    │   └── assets/           # Imágenes, vectores y estilos globales
+    ├── public/               # Archivos estáticos
+    └── tailwind.config.mjs   # Configuración de diseño y colores
 
 # 🚀 Instalación y Desarrollo Local
 Si deseas replicar este proyecto localmente, sigue estos pasos:
 
 Clonar el repositorio:
 
-```bash
+Bash
 git clone https://github.com/yamf07/posicionamientoweb.git
 
 Instalar dependencias:
 
-```bash
+Bash
 npm install
 
 Ejecutar en modo desarrollo:
 
-```bash
+Bash
 npm run dev
 
 4Construir para producción:
 
-```bash
+Bash
 npm run build
 
 # 📈 Roadmap / Próximas Actualizaciones
