@@ -119,12 +119,17 @@ export default function App() {
   const [showWA, setShowWA] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => {
-      setScrolled(window.scrollY > 20);
-      setShowWA(window.scrollY > 400);
+    const onScroll = () => { setScrolled(window.scrollY > 20); };
+    const handleScroll = () => {
+      if (window.scrollY > 400) { setShowWA(true); }
+      else { setShowWA(false); }
     };
+
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll); // El código se detiene aquí
+
+    window.addEventListener('scroll', onScroll); // Esto nunca se ejecuta
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
   const handleCta = () => window.open(GOOGLE_FORM_URL, '_blank');
