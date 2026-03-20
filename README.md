@@ -3,7 +3,7 @@
 # 🚀 Landing Page: Posicionamiento Web & SEO
 Esta es la documentación del repositorio oficial para la Landing Page de servicios de Posicionamiento Web y Auditoría SEO. El proyecto está diseñado con un enfoque de alto rendimiento, optimización de conversión (CRO) y una estética profesional minimalista.
 
-🔗 Demo en vivo: posicionamientoweb.netlify.app
+🔗 Demo en vivo: posicionamientoweb.vercel.app
 
 # 🛠️ Tecnologías Utilizadas
 El proyecto fue construido utilizando herramientas de última generación para garantizar velocidad de carga y escalabilidad:
