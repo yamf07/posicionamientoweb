@@ -12,7 +12,7 @@ El proyecto fue construido utilizando herramientas de última generación para g
 
 - Estilos: Tailwind CSS para un diseño responsivo y moderno.
 
-- Despliegue: Netlify con integración continua (CI/CD).
+- Despliegue: Vercel con integración continua (CI/CD).
 
 - Iconografía: Lucide React / FontAwesome.
 
