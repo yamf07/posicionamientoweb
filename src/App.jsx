@@ -376,8 +376,8 @@ export default function App() {
                   <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="24" height="24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg>
                 </div>
                 <div>
-                  <strong style={{ color: '#fff', display: 'block' }}>Cliente Satisfecho</strong>
-                  <span style={{ color: '#60a5fa', fontSize: '0.8rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em' }}>Negocio Local · Venezuela</span>
+                  <strong style={{ color: '#fff', display: 'block' }}>Propietario</strong>
+                  <span style={{ color: '#60a5fa', fontSize: '0.8rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em' }}>San Juan</span>
                 </div>
               </div>
             </div>
